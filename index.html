@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetLife — Adote. Cuide. Faça a diferença.</title>
+  
+  <!-- Tipografia Google Fonts: Poppins e Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Ícones FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Arquivo CSS separado -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. CABEÇALHO -->
+  <header class="header">
+    <div class="container header-content">
+      <!-- Logotipo: Coração com silhuetas de cachorro e gato -->
+      <a href="#" class="logo">
+        <svg width="42" height="38" viewBox="0 0 64 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 55C32 55 4 37.5 4 18.5C4 9.5 11 3 19.5 3C24.8 3 29.5 5.8 32 10C34.5 5.8 39.2 3 44.5 3C53 3 60 9.5 60 18.5C60 37.5 32 55 32 55Z" fill="#69B7E8" stroke="#123C67" stroke-width="3.5"/>
+          <!-- Silhueta Cachorro -->
+          <path d="M16 32C16 26 20 22 24 22L27 17L30 22C32 23 33 26 33 30V38H16V32Z" fill="#FFFFFF"/>
+          <!-- Silhueta Gato -->
+          <path d="M33 31C33 26 36 23 39 23L40 18L43 22L46 18L47 23C50 24 51 27 51 31V39H33V31Z" fill="#123C67"/>
+        </svg>
+        <span class="logo-text">Pet<span>Life</span></span>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav-menu">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#animais" class="nav-link">Animais</a>
+        <a href="#como-funciona" class="nav-link">Sobre</a>
+        <a href="#favoritos" class="nav-link">Favoritos <i class="fa-regular fa-heart"></i></a>
+      </nav>
+
+      <!-- Pesquisa por Nome -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar por nome..." aria-label="Buscar animal por nome">
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Uma amizade<br>pode mudar<br><span>duas vidas.</span></h1>
+        <p>Adote um pet e descubra o amor incondicional.</p>
+        <a href="#animais" class="btn-primary">
+          Conheça nossos animais <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-blob"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" 
+          alt="Cachorro dourado e gato rajado lado a lado" 
+          class="hero-img"
+        />
+        <i class="fa-solid fa-paw paw-decor paw-1"></i>
+        <i class="fa-solid fa-paw paw-decor paw-2"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. EXPLORAÇÃO POR PERSONALIDADE -->
+  <section class="personality-bar-section">
+    <div class="container">
+      <div class="personality-bar">
+        <div class="personality-label">
+          Explore por<br>personalidade:
+        </div>
+        <div class="personality-divider"></div>
+        <div class="personality-filters">
+          <button class="filter-pill"><i class="fa-solid fa-dog"></i> Brincalhão</button>
+          <button class="filter-pill"><i class="fa-solid fa-heart"></i> Carinhoso</button>
+          <button class="filter-pill"><i class="fa-solid fa-spa"></i> Tranquilo</button>
+          <button class="filter-pill"><i class="fa-solid fa-magnifying-glass"></i> Curioso</button>
+          <button class="filter-pill"><i class="fa-regular fa-star"></i> Independente</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CATÁLOGO DE ANIMAIS EM DESTAQUE (COM HOVER EXPANSÍVEL) -->
+  <section id="animais" class="featured-pets">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2><i class="fa-solid fa-paw"></i> Nossos Animais em Destaque</h2>
+          <p class="section-subtitle">Passe o mouse sobre um pet para descobrir sua personalidade e acessar seu perfil.</p>
+        </div>
+        <a href="#" class="view-all">Ver mais <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="pets-grid">
+        
+        <!-- CARD 1: LUNA -->
+        <article class="pet-card">
+          <div class="pet-card-main">
+            <div class="pet-photo-ring">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Gata Luna">
+            </div>
+            <div class="pet-basic-info">
+              <h3>Luna <span class="gender female">♀</span></h3>
+              <p class="pet-location"><i class="fa-solid fa-location-dot"></i> São Paulo - SP</p>
+              <span class="pet-age">Gato • 1 ano</span>
+            </div>
+          </div>
+
+          <!-- Painel lateral revelado no Hover (Inspirado na Imagem 2) -->
+          <div class="pet-card-hover-panel">
+            <span class="panel-title">Personalidade</span>
+            <div class="personality-tags">
+              <span class="tag"><i class="fa-solid fa-paw"></i> Curiosa</span>
+              <span class="tag"><i class="fa-solid fa-heart"></i> Carinhosa</span>
+              <span class="tag"><i class="fa-solid fa-moon"></i> Tranquila</span>
+            </div>
+            <a href="#" class="btn-profile">Ver perfil <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- CARD 2: THOR -->
+        <article class="pet-card">
+          <div class="pet-card-main">
+            <div class="pet-photo-ring">
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80" alt="Cachorro Thor">
+            </div>
+            <div class="pet-basic-info">
+              <h3>Thor <span class="gender male">♂</span></h3>
+              <p class="pet-location"><i class="fa-solid fa-location-dot"></i> São Paulo - SP</p>
+              <span class="pet-age">Cachorro • 2 anos</span>
+            </div>
+          </div>
+
+          <!-- Painel lateral revelado no Hover -->
+          <div class="pet-card-hover-panel">
+            <span class="panel-title">Personalidade</span>
+            <div class="personality-tags">
+              <span class="tag"><i class="fa-solid fa-dog"></i> Brincalhão</span>
+              <span class="tag"><i class="fa-solid fa-heart"></i> Carinhoso</span>
+            </div>
+            <a href="#" class="btn-profile">Ver perfil <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- CARD 3: MAX -->
+        <article class="pet-card">
+          <div class="pet-card-main">
+            <div class="pet-photo-ring">
+              <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=500&q=80" alt="Cachorro Max">
+            </div>
+            <div class="pet-basic-info">
+              <h3>Max <span class="gender male">♂</span></h3>
+              <p class="pet-location"><i class="fa-solid fa-location-dot"></i> Campinas - SP</p>
+              <span class="pet-age">Cachorro • 3 anos</span>
+            </div>
+          </div>
+
+          <!-- Painel lateral revelado no Hover -->
+          <div class="pet-card-hover-panel">
+            <span class="panel-title">Personalidade</span>
+            <div class="personality-tags">
+              <span class="tag"><i class="fa-solid fa-spa"></i> Tranquilo</span>
+              <span class="tag"><i class="fa-solid fa-heart"></i> Carinhoso</span>
+              <span class="tag"><i class="fa-regular fa-star"></i> Independente</span>
+            </div>
+            <a href="#" class="btn-profile">Ver perfil <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. COMO FUNCIONA A ADOÇÃO -->
+  <section id="como-funciona" class="how-it-works">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Como funciona a adoção?</h2>
+        <p>Centralizamos todas as informações para tornar o encontro com seu novo melhor amigo simples e seguro.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon bg-blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>1. Explore perfis</h3>
+          <p>Filtre por espécie, idade ou selecione traços de personalidade que combinam com sua rotina.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon bg-pink"><i class="fa-solid fa-book-open"></i></div>
+          <h3>2. Conheça a história</h3>
+          <p>Acesse o perfil completo do animal para ler sua história, hábitos e necessidades especiais.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon bg-cream"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>3. Demonstre interesse</h3>
+          <p>Envie sua solicitação diretamente pelo perfil do pet para iniciar uma adoção responsável.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MENSAGEM FINAL / RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-banner">
+      <h2>Pronto para transformar uma vida?</h2>
+      <p>Adotar é um ato de amor e responsabilidade. Cada cão e gato merece um lar acolhedor.</p>
+      <span class="slogan">"Adote. Cuide. Faça a diferença."</span>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PetLife — Plataforma de Adoção Responsável.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
